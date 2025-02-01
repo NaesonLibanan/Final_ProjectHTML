@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            margin: 20px;
+            line-height: 1.6;
+            color: #333; 
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 32px;
+            border: 1px solid #ddd; 
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+            background-color: #edede9; 
+        }
+        .main_image {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            }
+
+        h1, h2, h3 {
+            color: #2c3e50; 
+        }
+        h1 {
+            font-size: 2em;
+        }
+        h2 {
+            font-size: 1.5em;
+            margin-top: 1em; 
+        }
+
+        .section {
+            margin-bottom: 1.5em;
+        }
+        
+        .contact-info {
+            margin-bottom: 1em;
+        }
+        .contact-item {
+            display: inline-flex;
+            align-items: center;
+            margin-right: 10px;
+        }
+
+        .contact-icon {
+            width: 20px; 
+            height: 20px; 
+            margin-right: 5px;
+        }
+        .contact-info a {
+            color: #005f73; 
+            text-decoration: none;
+        }
+        .contact-info p{
+            margin: 0px;
+        }
+
+        ul {
+            list-style-type: disc;
+            padding-left: 20px;
+        }
+
+        .skill-list {
+            columns: 2; 
+            -webkit-columns: 2; 
+            -moz-columns: 2; 
+        }
+
+        .education-item {
+          margin-bottom: 1em;
+        }
+        .education-item h3{
+            padding-bottom: 0px !important;
+            margin-bottom: 0px !important;
+        }
+        .education-item p{
+            padding-top: 0px !important;
+            margin-top: 0px !important;
+        }
+        #cta{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 200px;
+        }
+       .btn{
+        padding: 20px;
+        background-color: #005f73;
+        color: #ffffff;
+        font-weight: 700;
+        font-size: 16px;
+
+       }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="name-image">
+            <img class="main_image" src="Pic.jpg"/>
+            <h1>Naeson Marc Libanan</h1>
+        </div>
+        <div class="contact-info">
+                <p><span class="contact-item">
+                  <img src="https://cdn-icons-png.flaticon.com/128/646/646094.png" alt="Email Icon" class="contact-icon"><a class="link" target="_blank" href="mailto:naesonmarc0203@gmail.com">naesonmarc0203@gmail.com</a>
+                </span></p>
+                <p><span class="contact-item">
+                  <img src="https://cdn-icons-png.flaticon.com/128/126/126509.png" alt="Phone Icon" class="contact-icon"><a class="link" target="_blank" href="tel:(+63) 971 566 320 811">(+63) 971 566 320 811
+                </a></span></p>
+                <p><span class="contact-item">
+                  <img src="https://cdn-icons-png.flaticon.com/128/535/535239.png" alt="Location Icon" class="contact-icon"><a class="link" target="_blank" href="https://maps.app.goo.gl/qxysJWEWP5opwVXP8">Sharjah, Al Khan Marwan B
+                </a></span></p>
+            </div>
+        <div class="section">
+            <h2>Summary</h2>
+            <p>Enthusiastic, motivated individual who seeks and eager to find challenges which provides growth and experiences</p>
+        </div>
+
+        <div class="section">
+            <h2>Skills</h2>
+            <ul class="skill-list">
+                <li>Java,C#,Javascript</li>
+                <li>VPN setup, Firewalls, Cybersecurity principles</li>
+                <li>Time management</li>
+                <li>AWS, Azure, Google Cloud, Virtual Machines</li>
+                <li>Microsoft Office (Word, PPT and Excel)</li>
+                <li>Solid work</li>
+            </ul>
+        </div>
+        <div class="section">
+            <h2>Education</h2>
+            <div class="education-item">
+                <h3>BS Information Technology</h3>
+                <p>Southville International School and Colleges <br>2021 - Present</p>
+            </div>
+            <div class="education-item">
+                <h3>BS Mechanical Engineering</h3>
+                <p>University of Bolton<br>2019 - 2021</p>
+            </div>
+        </div>
+    </div>
+    <div id="cta">
+        <button class="btn" onclick="printPage()">Print this page</button>
+    </div>
+    <script>
+        function printPage() {
+          window.addEventListener('beforeprint', (event) => {
+
+            document.getElementById('cta').style.display = 'none';
+        
+        
+          });
+        
+            window.addEventListener('afterprint', (event) => {
+                document.getElementById('cta').style.display = 'flex';
+            });
+        
+          window.print();
+        }
+        </script>
+</body>
+</html>
